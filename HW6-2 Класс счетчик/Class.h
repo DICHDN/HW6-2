@@ -1,11 +1,9 @@
 #pragma once
-#include <iostream>
-#include <windows.h>
-#include <string>
+
 class Counter
 {
 private:
-	char symbol;
+	char symbol='0';
 	int num = 1;
 public:
 	Counter()
@@ -18,15 +16,9 @@ public:
 	{
 		this->num = num;
 	}
-	void enter_num(int num)
-	{
-		this->num = num;
-	}
-	void progres(char symbol)
-	{
-		if (symbol == '+') ++num;
-		if (symbol == '-') --num;
-		if (symbol == '=') std::cout << num << std::endl;
-	}
+	void enter_num(int num);
+	
+	void progres(char symbol);
+	
 
 };
